@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- 🌸 Header -->
+  <header>
+    <div class="logo">Beauty <span style="color:#333;">Store</span></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+    <input type="text" id="search" placeholder="Search products...">
+    <button onclick="searchProduct()"><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div>
+  <!-- Wishlist Icon -->
+<div class="wishlist">
+  ❤️ <span id="wishlist-count">0</span>
+</div>
+
+  </header>
+
+  <!-- 🌸 Home Section -->
+  <section class="Home">
+    <div class="home-text">
+      <h1>Grow Like Never Before</h1>
+      <p>Discover luxury skincare and beauty products 
+        designed to enhance your natural glow 
+        and bring out your true elegance.</p>
+      <button class="home-btn">Explore Products</button>
+    </div>
+    <div class="home-img">
+      <img src="images/home-img.png" alt="Home Image">
+    </div>
+  </section>
+
+  <!-- 🌸 Categories -->
+  <section class="categories">
+    <h2 class="section-title">Featured Categories</h2>
+    <div class="category-container">
+      <div class="category-card">
+        <img src="images/skincare_catagory.png" alt="Skincare">
+        <h3>Skincare</h3>
+      </div>
+      <div class="category-card">
+        <img src="images/makeup.png" alt="Makeup">
+        <h3>Makeup</h3>
+      </div>
+      <div class="category-card">
+        <img src="images/haircare.png" alt="Haircare">
+        <h3>Haircare</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌸 Skincare Banner -->
+  <section class="skincare-banner">
+    <div class="banner-content">
+      <h2>Glow With Premium Skincare</h2>
+      <p>Handpicked products to nourish your skin & bring out your natural beauty.</p>
+      <button class="banner-btn">Shop Now</button>
+    </div>
+    <div class="banner-img">
+      <img src="images/skincare-baner.png" alt="Skincare Products">
+    </div>
+  </section>
+
+  <!-- 🌸 Skincare Products -->
+  <section class="skincare-products">
+    <h2 class="section-title">Our Skincare Range</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img src="images/cream.png" alt="Cream">
+        <h3>Hydrating Cream</h3>
+        <p class="price">Rs. 1,499</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/facewash.jpg" alt="Facewash">
+        <h3>Facewash & Serum</h3>
+        <p class="price">Rs. 1799</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/serum.jpg" alt="Serum">
+        <h3>Vitamin C Serum</h3>
+        <p class="price">Rs. 1299</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/deal.png" alt="Facial Kit">
+        <h3>Facial Kit - Glow Deal</h3>
+        <p class="price">Rs. 3,999</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌸 Special Deals -->
+  <section class="special-deals">
+    <h2 class="section-title"> Special Deals</h2>
+    <div class="deal-box deal-banner">
+      <div class="deal-card small-card">
+        <img src="images/skincare_catagory.png" alt="Glow Kit">
+        <h4>Glow Kit</h4>
+        <p><del>Rs. 3,000</del> Rs. 2,400</p>
+        <button class="deal-btn">Add to Cart</button>
+      </div>
+      <div class="offer-text">
+        <h3>Flat 20% OFF</h3>
+        <p>On All Skincare Kits – Limited Time!</p>
+        <button class="deal-btn">Grab Deal</button>
+      </div>
+      <div class="deal-card small-card">
+        <img src="images/hydrated kit.jpg" alt="Hydration Kit">
+        <h4>Hydration Kit</h4>
+        <p><del>Rs. 2,500</del> Rs. 2,000</p>
+        <button class="deal-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌸 Makeup Banner -->
+  <section class="makeup-banner">
+    <div class="banner-content">
+      <h2>Unleash Your Glam Look</h2>
+      <p>Discover bold lipsticks, eye palettes & foundation kits crafted for your perfect look.</p>
+      <button class="banner-btn">Shop Makeup</button>
+    </div>
+    <div class="banner-img">
+      <img src="images/makeup-banner.png" alt="Makeup Products">
+    </div>
+  </section>
+
+  <!-- 🌸 Makeup Products -->
+  <section class="makeup-products">
+    <h2 class="section-title">Best Selling Makeup</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img src="images/matte-lipsticks.jpg" alt="Lipstick Set">
+        <h3>Matte Lipstick Set</h3>
+        <p class="price">Rs. 1,600</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/eyeshadow.jpg" alt="Eye Palette">
+        <h3>Eye Shadow Palette</h3>
+        <p class="price">Rs. 2,900</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/foundation.jpg" alt="Foundation">
+        <h3>Foundation Kit</h3>
+        <p class="price">Rs. 2500</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/blush.jpg" alt="Blush Glow">
+        <h3>Blush Glow</h3>
+        <p class="price">Rs. 1,200</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/maskara.jpg" alt="Mascara">
+        <h3>Mascara</h3>
+        <p class="price">Rs. 450</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/liquid lipsticks.jpg" alt="Liquid Kit">
+        <h3>Liquid Lipstick</h3>
+        <p class="price">Rs. 1500</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/brushes.jpg" alt="Brushes">
+        <h3>Brushes</h3>
+        <p class="price">Rs. 600</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+      <div class="product-card">
+        <img src="images/makup deal.jpg" alt="Foundation Kit">
+        <h3>Foundation Kit</h3>
+        <p class="price">Rs. 3,500</p>
+        <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+      </div>
+    </div>
+  </section>
+<section class="hair-banner">
+  <div class="hair-content">
+    <h2>Nourish Your Hair Naturally</h2>
+    <p>Discover shampoos, conditioners & oils that bring
+      shine, strength, and smoothness.</p>
+    <button class="baner-btn">Shop Haircare</button>
+  </div>
+  <div class="hair-img">
+    <img src="images/hair-baner.png" alt="Haircare">
+  </div>
+</section>
+<!-- 🌸 Haircare Products -->
+<section class="haircare-products">
+  <h2 class="section-title">Our Haircare Range</h2>
+  <div class="product-container">
+    <div class="product-card">
+      <img src="https://i.pinimg.com/1200x/08/de/66/08de66950190c381312249bf8ad54f59.jpg" alt="Hair Oil">
+      <h3>Hair Oil</h3>
+      <p class="price">Rs. 1,200</p>
+       <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.pinimg.com/1200x/74/45/2d/74452dec1c59d070536ea81f03e616be.jpg" alt="Keratin Treatment">
+      <h3>Keratin Treatment</h3>
+      <p class="price">Rs. 2,800</p>
+       <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.pinimg.com/1200x/a0/75/00/a07500ae4685ae9d0a8637db669a62bc.jpg" alt="Shampoo">
+      <h3>Smoothing Shampoo</h3>
+      <p class="price">Rs. 1,500</p>
+     <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+  </div>
+    </div>
+    <div class="product-card">
+      <img src="images/shampo & Conditionar.jpg" alt="Conditioner">
+      <h3>Moisture Conditioner</h3>
+      <p class="price">Rs. 1,400</p>
+       <div class="product-actions">
+    <button class="cart-btn">🛒 Add to Cart</button>
+    <button class="wishlist-btn">❤️ Wishlist</button>
+       </div>
+    </div>
+  </div>
+</section>
+<!-- 🌸 Customer Reviews -->
+<section class="testimonials">
+  <h2 class="section-title">What Our Customers Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <h3>Sara Khan</h3>
+      <p>"The skincare kit made my skin glow within weeks! Highly recommended."</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="testimonial-card">
+      <h3>Ayesha Malik</h3>
+      <p>"Loved the matte lipsticks, the shades are gorgeous and long lasting."</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="testimonial-card">
+      <h3>Hina Ali</h3>
+      <p>"The hair oil really helped reduce my hair fall. Great quality!"</p>
+      <div class="stars">⭐⭐⭐⭐</div>
+    </div>
+    </div>
+</section>
+<!-- 🌸 Newsletter Section -->
+<section class="newsletter">
+  <div class="newsletter-content">
+    <h2>Get 10% OFF Your First Order</h2>
+    <p>Subscribe to our newsletter and stay updated with exclusive deals & beauty tips!</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+<!-- 🌸 Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-about">
+      <h2>Beauty Store</h2>
+      <p>Your go-to destination for premium skincare, makeup & haircare products.</p>
+    </div>
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: support@beautystore.com</p>
+      <p>Phone: +92 300 1234567</p>
+      <div class="social-icons">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Beauty Store. All rights reserved. <span>Javeria Tariq</span></p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
