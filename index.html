@@ -8,32 +8,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- 🌸 Header -->
   <header>
+  <div class="top-bar">
     <div class="logo">Beauty <span style="color:#333;">Store</span></div>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Shop</a></li>
+        <!-- <li><a href="#">Shop</a></li> -->
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+  </div>
+  <div class="search-icons">
     <div class="search-bar">
-    <input type="text" id="search" placeholder="Search products...">
-    <button onclick="searchProduct()"><i class="fas fa-search"></i></button>
+      <input type="text" id="search" placeholder="Search products...">
+      <button onclick="searchProduct()"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="cart-wishlist">
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+      <div class="wishlist">
+        ❤️ <span id="wishlist-count">0</span>
+      </div>
+    </div>
   </div>
-
-  <div class="cart-icon">
-    <i class="fas fa-shopping-cart"></i>
-    <span id="cart-count">0</span>
-  </div>
-  <!-- Wishlist Icon -->
-<div class="wishlist">
-  ❤️ <span id="wishlist-count">0</span>
-</div>
-
-  </header>
+</header>
 
   <!-- 🌸 Home Section -->
   <section class="Home">
@@ -122,31 +124,25 @@
       </div>
     </div>
   </section>
-
-  <!-- 🌸 Special Deals -->
-  <section class="special-deals">
-    <h2 class="section-title"> Special Deals</h2>
-    <div class="deal-box deal-banner">
-      <div class="deal-card small-card">
-        <img src="images/skincare_catagory.png" alt="Glow Kit">
-        <h4>Glow Kit</h4>
-        <p><del>Rs. 3,000</del> Rs. 2,400</p>
-        <button class="deal-btn">Add to Cart</button>
-      </div>
-      <div class="offer-text">
-        <h3>Flat 20% OFF</h3>
-        <p>On All Skincare Kits – Limited Time!</p>
-        <button class="deal-btn">Grab Deal</button>
-      </div>
-      <div class="deal-card small-card">
-        <img src="images/hydrated kit.jpg" alt="Hydration Kit">
-        <h4>Hydration Kit</h4>
-        <p><del>Rs. 2,500</del> Rs. 2,000</p>
-        <button class="deal-btn">Add to Cart</button>
-      </div>
+<section class="special-deals">
+  <h2 class="section-title">Special Deals</h2>
+  <div class="deal-grid">
+    <div class="deal-card">
+      <span class="badge">20% OFF</span>
+      <img src="images/skincare_catagory.png" alt="Glow Kit">
+      <h4>Glow Kit</h4>
+      <p><del>Rs. 3,000</del> Rs. 2,400</p>
+      <button class="deal-btn">🛒 Add to Cart</button>
     </div>
-  </section>
-
+    <div class="deal-card">
+      <span class="badge">20% OFF</span>
+      <img src="images/hydrated kit.jpg" alt="Hydration Kit">
+      <h4 style="margin-top: 20px;">Hydration Kit</h4>
+      <p><del>Rs. 2,500</del> Rs. 2,000</p>
+      <button class="deal-btn">🛒 Add to Cart</button>
+    </div>
+  </div>
+</section>
   <!-- 🌸 Makeup Banner -->
   <section class="makeup-banner">
     <div class="banner-content">
@@ -344,8 +340,6 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Contact -->
     <div class="footer-contact">
       <h3>Contact Us</h3>
       <p>Email: support@beautystore.com</p>
@@ -356,13 +350,11 @@
   <a href="#"><i class="fab fa-twitter"></i></a>
 </div>
     </div>
-
   </div>
   <div class="footer-bottom">
     <p>© 2025 Beauty Store. All rights reserved. <span>Javeria Tariq</span></p>
   </div>
 </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

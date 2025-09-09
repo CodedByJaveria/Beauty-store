@@ -13,16 +13,6 @@ newsletterForm.addEventListener("submit", (e) => {
   alert("🎉 Thank you for subscribing! You’ll get updates & exclusive deals.");
   newsletterForm.reset();
 });
-let cartCount = 0;
-const cartCountElement = document.getElementById("cart-count");
-
-document.querySelectorAll(".cart-btn, .deal-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    cartCount++;
-    cartCountElement.textContent = cartCount;
-    alert("✔ Added to cart!");
-  });
-});
 
 // 🔍 Search Bar Logic
 function searchProduct() {
@@ -60,6 +50,28 @@ document.querySelectorAll(".wishlist-btn").forEach((btn) => {
       alert(`❤️ "${productName}" added to wishlist!`);
     } else {
       alert(`⚠ "${productName}" is already in wishlist!`);
+    }
+  });
+});
+let cartCount = 0;
+const cartCountElement = document.getElementById("cart-count");
+
+document.querySelectorAll(".cart-btn, .deal-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const productCard = e.target.closest(".deal-card, .product-card"); 
+    let productName = "";
+    if (productCard) {
+      const title = productCard.querySelector("h3, h4");
+      if (title) {
+        productName = title.textContent;
+      }
+    }
+    cartCount++;
+    cartCountElement.textContent = cartCount;
+    if (productName) {
+      alert(`✔ "${productName}" added to cart!`);
+    } else {
+      alert("✔ Deal added to cart!");
     }
   });
 });
